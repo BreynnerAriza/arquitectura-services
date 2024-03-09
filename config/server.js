@@ -1,5 +1,6 @@
 import express from "express";
 import route from "../routes/index.routes.js";
+import pgService from "../services/pg.service.js";
 import {env} from "./default.js"
 
 export default class Server{
@@ -9,7 +10,9 @@ export default class Server{
         this.port = env.port || 8000;
     }
 
-    connectionDB(){}
+    connectionDB(){
+        new pgService();
+    }
 
     middlewares(){}
 
