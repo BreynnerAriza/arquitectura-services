@@ -14,7 +14,9 @@ export default class Server{
         new pgService();
     }
 
-    middlewares(){}
+    middlewares(){
+        this.app.use(express.json());
+    }
 
     routes(){
         this.app.use(route)
