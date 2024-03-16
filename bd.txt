@@ -1,0 +1,13 @@
+npm i -g nodemon
+
+CREATE TABLE product(
+	id_product serial,
+	name varchar(500),
+	detail varchar(500),
+	value numeric,
+	constraint pk_id_product primary key(id_product)
+)
+
+npm i jsonwebtoken
+
+npm i express-validator
